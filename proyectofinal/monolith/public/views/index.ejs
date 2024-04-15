@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monolothic app</title>
+  </head>
+  <body>
+    <h1>Welcome to my Book app</h1>
+    <p>This is a ejs template</p>
+
+    <ul>
+      <% books.forEach(book =>{ %>
+      <li>
+        <strong> Title: </strong> <%= book.title %>,
+        <strong>Author: </strong> <%= book.author %>,
+        <strong>Year: </strong> <%= book.Year %>
+      </li>
+      <% }) %>
+    </ul>
+
+    <!-- <script>
+      var books = <%- JSON.stringify(books) %>
+      var dataMicroservice =   <%- JSON.stringify(data) %>
+
+      console.log(books)
+      console.log(dataMicroservice);
+    </script> -->
+  </body>
+</html>

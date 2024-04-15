@@ -1,0 +1,19 @@
+version: "1"
+services:
+  monolith:
+    build: ./monolith
+    ports:
+      - "8000:3005"
+    environment:
+      - NODE_ENV=development
+
+  microservicio:
+    build: ./microservicio
+    ports:
+      - "8001:3005"
+    environment:
+      - NODE_ENV=development
+      - DB_HOST=host.docker.internal
+      - DB_USER=root
+      - DB_PASS=admin1234
+      - DB_NAME=users_seq
